@@ -270,11 +270,3 @@ function switchKey() {
 			break;
 		}
 }
-
-
-function touchMoved() {		// как-то надо устроить управление мышью
-  		direct = atan((mouseY-ship.y)/(mouseX-ship.x));
-  		ship.displayFire();
-		let rand = 0.3*(random()-0.5);
-		fuel[fuel.length] = new ball(ship.x - 25*sin(direct+rand),ship.y-20*cos(direct+rand),ship.vx,ship.vy,F1);
-}
