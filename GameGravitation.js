@@ -39,8 +39,8 @@ function setup () {
     createCanvas(w, h);
 	ellipseMode(CENTER);
 	rectMode(CENTER);
-	G = createGraphics(80,80);
-	G.image(img,0,0,80,80);
+	//G = createGraphics(80,80);
+	//G.image(img,0,0,80,80);
     textSize(30);
     // traslate(windowWidth/2,windowHight/2);
     
