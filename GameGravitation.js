@@ -12,6 +12,7 @@ var w;
 var h;
 let img;
 let N=0;
+let stopKey = 0;
 
 function F(x) {
 	return 10000/x/x;	// 5*sin(x/10);
@@ -34,8 +35,8 @@ function F3(x) {
 // }
 
 function setup () {
-	w=1520;
-	h=840;
+	w = windowWidth - 50;
+	h = windowHeight - 50;
     createCanvas(w, h);
 	ellipseMode(CENTER);
 	rectMode(CENTER);
@@ -59,6 +60,16 @@ function setup () {
 }
 
 function draw () {
+	if(stopKey) {
+		push();
+		fill(255,10);
+		stroke(100,10);
+		rect(50,80,20,60);
+		rect(90,80,20,60);
+		text('pause',30,30);
+		pop();
+		return 0;
+	}
 	background(0,0,10);
 
 	ship.displayShip();
@@ -215,6 +226,7 @@ function keyPressed() {
 	// print(keyCode);
 	// <37 ^38 >39 v40
 	// enter=13 // shift=16 // ctrl=17 // alt=18
+	if(keyCode == 17) stopKey = !stopKey;
 }
 
 function keyReleased() {
