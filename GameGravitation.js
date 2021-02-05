@@ -30,9 +30,9 @@ function F3(x) {
 	return 1/x;
 }
 
-// function preload() {
-// 	img = loadImage('https://lh3.googleusercontent.com/GBiFs3TmTtaqysVABdoNDPuanAH6TkMN61dg2Z_A-vX-J90fiE8SlqMBY-cGZ50BhdSI8Q=s85');
-// }
+function preload() {
+	img = loadImage('https://github.com/Adventurer8/Adventurer8.github.io/blob/main/assets/tieFighter.png?raw=true');
+}
 
 function setup () {
 	w = windowWidth - 50;
@@ -185,7 +185,7 @@ class ball {
 		line(this.x,this.y,this.x + 30*sin(direct),this.y + 30*cos(direct));
 		translate(this.x,this.y);
 		rotate(PI-direct);
-		// image(G,-40,-40);
+		image(G,-40,-40);
 		pop()
 	}
 
