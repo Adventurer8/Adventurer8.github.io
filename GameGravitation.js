@@ -31,7 +31,7 @@ function F3(x) {
 }
 
 function preload() {
-	img = loadImage('https://github.com/Adventurer8/Adventurer8.github.io/blob/main/assets/tieFighter.png?raw=true');
+	img = loadImage('https://github.com/Adventurer8/Adventurer8.github.io/blob/main/assets/tieFighter.png');
 }
 
 function setup () {
