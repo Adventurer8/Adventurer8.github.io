@@ -30,9 +30,9 @@ function F3(x) {
 	return 1/x;
 }
 
-function preload() {
-	img = loadImage('https://github.com/Adventurer8/Adventurer8.github.io/blob/main/assets/tieFighter.png');
-}
+// function preload() {
+// 	img = loadImage('https://github.com/Adventurer8/Adventurer8.github.io/blob/main/assets/tieFighter.png');
+// }
 
 function setup () {
 	w = windowWidth - 50;
@@ -91,7 +91,7 @@ function draw () {
 		ship.force(fuel[i], F1);
 		fuel[i].force(ship, F2);
 
-		// fuel[i].force(planet,F);
+		fuel[i].force(planet,F3);
 		// for(let j=0; j<fuel.length;j++) {
 		// 	if (i == j ) break;
 		// 	fuel[i].force(fuel[j],F3);	
@@ -185,7 +185,7 @@ class ball {
 		line(this.x,this.y,this.x + 30*sin(direct),this.y + 30*cos(direct));
 		translate(this.x,this.y);
 		rotate(PI-direct);
-		image(G,-40,-40);
+// 		image(G,-40,-40);
 		pop()
 	}
 
